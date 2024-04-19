@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Animated Signup</title>
+	
+</head>
+
+<body>
+	<div class="box">
+		<form autocomplete="off">
+			<h2>Sign up</h2>
+			<div class="inputBox">
+				<input type="text" [(ngModel)]="signupOj.userName" id="username" name="userName"  required="required">
+				<span>UserName</span>
+				<i></i>
+			</div>
+
+            <div class="inputBox">
+				<input type="text" [(ngModel)]="signupOj.phone"  id="phone" name="phone"  required="required">
+				<span>Phone Number</span>
+				<i></i>
+			</div>
+
+			<div class="inputBox">
+				<input type="password" [(ngModel)]="signupOj.password"  name="password" id="password"  required="required">
+				<span>Password</span>
+				<i></i>
+			</div>
+            <div class="inputBox">
+				<input type="password" [(ngModel)]="signupOj.cfpassword"  name="cfpassword" id="cfpassword"  required="required">
+				<span>Confirm Password</span>
+				<i></i>
+			</div>
+			<div class="links">
+				<a href="#">Do you have a account ?</a>
+				<a href="#">Login</a>
+			</div>
+			<input type="submit" (click)="onSignup()"  value="Signup">
+		</form>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+
+
+<div class="row">
+  <div [ngClass]="isSidePanelVisible ? 'col-8' : 'col-12'">
+    <div class="card">
+      <div class="card-header bg-primary">
+        <div class="row">
+          <div class="col-6">Product List</div>
+          <div class="col-6 text-end">
+            <!-- Moved text-end class to the parent div -->
+            <button class="btn btn-sm btn-success" (click)="openSidePanel()">
+              New
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-3">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="img_avatar1.png"
+                alt="Card image"
+              />
+              <div class="card-body">
+                <h4 class="card-title">John Doe</h4>
+                <p class="card-text">Some example text.</p>
+                <a href="#" class="btn btn-primary">See Profile</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="img_avatar1.png"
+                alt="Card image"
+              />
+              <div class="card-body">
+                <h4 class="card-title">John Doe</h4>
+                <p class="card-text">Some example text.</p>
+                <a href="#" class="btn btn-primary">See Profile</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="img_avatar1.png"
+                alt="Card image"
+              />
+              <div class="card-body">
+                <h4 class="card-title">John Doe</h4>
+                <p class="card-text">Some example text.</p>
+                <a href="#" class="btn btn-primary">See Profile</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="img_avatar1.png"
+                alt="Card image"
+              />
+              <div class="card-body">
+                <h4 class="card-title">John Doe</h4>
+                <p class="card-text">Some example text.</p>
+                <a href="#" class="btn btn-primary">See Profile</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4" *ngIf="isSidePanelVisible">
+    <div class="card">
+      <div class="card-header bg-primary">
+        <div class="row">
+          <div class="col-6">New Product List</div>
+          <div class="col-6 text-end">
+            <!-- Moved text-end class to the parent div -->
+            <button class="btn btn-sm btn-success" (click)="closeSidePanel()">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6">
+            <label for="">Sku</label>
+            <input
+              type="text"
+              [(ngModel)]="productOj.ProductSku"
+              class="form-control"
+            />
+          </div>
+          <div class="col-6">
+            <label for="">Name</label>
+            <input
+              type="text"
+              [(ngModel)]="productOj.ProductName"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label for="">Short Name</label>
+            <input
+              type="text"
+              [(ngModel)]="productOj.ProductShortName"
+              class="form-control"
+            />
+          </div>
+          <div class="col-6">
+            <label for="">Price</label>
+            <input
+              type="text"
+              [(ngModel)]="productOj.ProductPrice"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label for="">Category</label>
+            <select name="" id="">
+              <option
+                *ngFor="let cate of categoryList"
+                [value]="cate.CategoryId"
+              >
+                {{ cate.categoryName }}
+              </option>
+            </select>
+          </div>
+          <div class="col-6">
+            <label for="">Delivery Time Span</label>
+            <input
+              type="text"
+              [(ngModel)]="productOj.DeliveryTimeSpan"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label for="">Image Url</label>
+            <input
+              type="text"
+              [(ngModel)]="productOj.ProductImageUrl"
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

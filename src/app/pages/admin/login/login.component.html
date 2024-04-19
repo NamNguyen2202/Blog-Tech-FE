@@ -1,0 +1,36 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Animated Login Form</title>
+	
+</head>
+
+<body>
+	<div class="box">
+		<form autocomplete="off">
+			<h2>Sign in</h2>
+			<div class="inputBox">
+				<input type="text" [(ngModel)]="loginOj.userName" id="username" name="userName"  required="required">
+				<span>UserName</span>
+				<i></i>
+			</div>
+			<div class="inputBox">
+				<input type="password" [(ngModel)]="loginOj.password" name="password" id="password"  required="required">
+				<span>Password</span>
+				<i></i>
+			</div>
+			<div class="links">
+				<a href="#">Forgot Password ?</a>
+				<a routerLink="/signup">Signup</a>
+            
+			</div>
+			<input type="submit" (click)="onLogin()"  value="Login">
+		</form>
+	</div>
+
+</body>
+
+</html>
